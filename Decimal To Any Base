@@ -1,5 +1,10 @@
-import java.util.*;
+// INPUT:
+// number: 57
+// base: 2
 
+// output: 111001
+import java.util.*;
+ 
 public class Main {
 
   public static void main(String[] args) {
