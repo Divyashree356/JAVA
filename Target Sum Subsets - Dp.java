@@ -15,6 +15,27 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+    //recursive method
+    public static boolean solve(int idx , int target , int[] arr)
+    {
+        if(idx==arr.length || target==0)
+        {
+            if(target==0)
+             return true;
+            else
+             return false;
+        }
+
+        boolean no = solve(idx+1 , target , arr);
+        boolean yes= false;
+        if(target-arr[idx]>=0)
+        {
+            yes= solve(idx+1  ,target-arr[idx] , arr);
+        }
+
+        return yes|| no;
+    }
+    //tabulation method
     public static boolean sumSubset(int[] arr , boolean[][] dp)
     {
         int n=dp.length;
